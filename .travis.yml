@@ -7,3 +7,10 @@ before_install:
 
 script:
     - docker run junaid388/docker-react npm run test -- --coverage
+
+deploy:
+    provider: pages #github pages
+    skip_cleanup: true
+    keep_history: true
+    on:
+        branch: master

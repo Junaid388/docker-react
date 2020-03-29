@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Still Working yeah.
+          something to show.
         </p>
         <a
           className="App-link"
