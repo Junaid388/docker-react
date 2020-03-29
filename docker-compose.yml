@@ -1,0 +1,19 @@
+version: '3'
+services: 
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev # Dockerfile
+        ports:
+            - "3000:3000"
+        volumes: 
+            - /app/node_modules # file to be skipped for refeenrce
+            - .:/app # Files to be referenced
+    tests:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev # Dockerfile
+        volumes: 
+            - /app/node_modules # file to be skipped for refeenrce
+            - .:/app # Files to be referenced
+        command: ["npm","run","test"]
